@@ -1,5 +1,7 @@
-const canvasToBlob = canvas => {
-  return new Promise(resolve => {
-    canvas.toBlob(blob => resolve(blob));
+exports.canvasToBlob = function(canvas) {
+  return new Promise(function(resolve) {
+    canvas.toBlob(function(blob) {
+      return resolve(blob);
+    });
   });
 };
